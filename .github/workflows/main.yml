@@ -20,7 +20,7 @@ jobs:
         path: './theme'
     - uses: actions/checkout@v2
       with:
-        repository: pelican-plugins/render-math
+        repository: skyldpod/render-math
         path: './render-math'
     - uses: skyldpod/gh-pages-pelican-action@v1
       env:
