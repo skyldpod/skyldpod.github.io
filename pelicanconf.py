@@ -1,5 +1,6 @@
 AUTHOR="skyldpod"
 THEME="theme/basic"
+SITEURL="https://skyldpod.github.io"
 SITENAME="Turtle Blurg"
 TIMEZONE='America/New_York'
 ARTICLE_URL="posts/{slug}.html"
