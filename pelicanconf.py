@@ -1,7 +1,7 @@
 AUTHOR="skyldpod"
 THEME="theme/basic"
 SITEURL="https://skyldpod.github.io"
-SITENAME="Turtle Blurg"
+SITENAME="turtle blurg"
 TIMEZONE='America/New_York'
 ARTICLE_URL="posts/{slug}.html"
 ARTICLE_SAVE_AS="posts/{slug}.html"

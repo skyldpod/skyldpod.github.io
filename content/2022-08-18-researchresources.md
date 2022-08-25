@@ -1,4 +1,4 @@
-title: Research Resources
+title: research resources
 tags: math
 
 ## TDA Background
