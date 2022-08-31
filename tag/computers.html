@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://skyldpod.github.io/theme/css/rdark.css" />
+        <link rel="stylesheet" type="text/css" href="https://skyldpod.github.io/theme/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="https://skyldpod.github.io/theme/css/turtle.css" />
+        <link href="https://skyldpod.github.io/" type="application/atom+xml" rel="alternate" title="turtle blurg ATOM Feed" /><!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <title>turtle blurg - computers tag</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <link href="https://skyldpod.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="turtle blurg Full Atom Feed" />
+
+<!-- Using MathJax, with the delimiters $ -->
+<!-- Conflict with pygments for the .mo and .mi -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  "HTML-CSS": {
+  styles: {
+  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+  },
+  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+        
+        </head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://skyldpod.github.io/">turtle blurg</a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+        </ul></nav><!-- /#menu -->
+<section id="content">
+
+<ul>
+      <a href="https://skyldpod.github.io/tag/math.html">math</a>
+      <a href="https://skyldpod.github.io/tag/computers.html">computers</a>
+      <a href="https://skyldpod.github.io/tag/literature.html">literature</a>
+</ul>
+
+<!--<h2>Articles tagged with computers</h2>
+-->
+
+<ul id="post-list">
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="https://skyldpod.github.io/posts/git-hacks.html" rel="bookmark" title="Permalink to git hacks">
+                    git hacks</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-25T00:00:00-04:00"> Thu 25 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="https://skyldpod.github.io/author/skyldpod.html">skyldpod</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <h3>configuration</h3>
+<p>Start the ssh agent (add this to your <code>~/.zshrc</code>, for example):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<p>Add the following at the head of <code>~/.gitconfig</code> in order to specify a git configuration per path. These are called <em>conditional includes</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[includeIf &quot;gitdir:~/path/work/&quot;]</span><span class="w"></span>
+<span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">gitconfig-work</span><span class="w"></span>
+<span class="k">[includeIf &quot;gitdir:~/path/play/&quot;]</span><span class="w"></span>
+<span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">gitconfig-play</span><span class="w"></span>
+</code></pre></div>
+
+<p>Contents of <code>~/.gitconfig-work</code> or <code>~/.gitconfig-play</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="w">    </span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">B</span><span class="w"></span>
+<span class="w">    </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ab</span><span class="w"></span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ab</span><span class="err">@</span><span class="n">e</span><span class="p">.</span><span class="n">mail</span><span class="w"></span>
+<span class="p">[</span><span class="n">core</span><span class="p">]</span><span class="w">      </span>
+<span class="w">    </span><span class="n">sshCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ssh</span><span class="w"> </span><span class="err">-</span><span class="n">o</span><span class="w"> </span><span class="s">&quot;IdentitiesOnly=yes&quot;</span><span class="w"> </span><span class="err">-</span><span class="n">i</span><span class="w"> </span><span class="err">~/</span><span class="p">.</span><span class="n">ssh</span><span class="err">/</span><span class="n">id_ed25519-work</span><span class="w"></span>
+</code></pre></div>
+
+<p>Add an <code>IdentityFile</code> to <code>~/.ssh/config</code> for each ssh key in use by git. It's reasonable practice to specify the host rather than use a wildcard:</p>
+<div class="highlight"><pre><span></span><code>Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519-work
+    IdentityFile ~/.ssh/id_ed25519-play
+</code></pre></div>
+
+<h3>debugging</h3>
+<p>List the source of each git configuration:</p>
+<div class="highlight"><pre><span></span><code>git config --list --show-origin
+</code></pre></div>
+
+<p>Unset credential helper:</p>
+<div class="highlight"><pre><span></span><code>git config --global --unset credential.helper
+</code></pre></div>
+
+<p>Show some in-scope git configurations:</p>
+<div class="highlight"><pre><span></span><code>git config user.email
+git config user.username
+git config core.sshCommand
+</code></pre></div>
+
+<p>See the full debugs logs of ssh to determine exactly where it's finding ssh keys:</p>
+<div class="highlight"><pre><span></span><code>ssh -v
+</code></pre></div>
+
+<p>git uses your ssh key to identify you. Determine which user git is authenticating you as:</p>
+<div class="highlight"><pre><span></span><code>ssh -o <span class="s2">&quot;IdentitiesOnly=yes&quot;</span> -i ~/.ssh/id_ed25519 -T git@github.com
+</code></pre></div>
+
+<p>The combination of <code>-o "IdentitiesOnly=yes" -i ~/.ssh/id_ed25519</code> may not always guarantee that you authenticate with the specified ssh key (there are may places ssh looks), but for my setup this works.</p> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+    <li><article class="hentry">
+        <header> 
+            <h2 class="entry-title">
+                <a href="https://skyldpod.github.io/posts/site-hacks.html" rel="bookmark" title="Permalink to site hacks">
+                    site hacks</a>
+            </h2> 
+        </header>
+        <footer class="post-info">
+            <abbr class="published" title="2022-08-25T00:00:00-04:00"> Thu 25 August 2022 </abbr>
+            <!--<address class="vcard author"><a class="url fn" href="https://skyldpod.github.io/author/skyldpod.html">skyldpod</a></address>-->
+        </footer><!-- /.post-info -->
+        <!--<div class="entry-content"> <p>Publish pelican site locally:</p>
+<div class="highlight"><pre><span></span><code>pelican -r -l
+</code></pre></div> </div>--><!-- /.entry-content   not article.summary--> 
+    </article></li>
+    <hr width=100%>
+</ul><!-- /#posts-list -->
+</section><!-- /#content -->
+</body>
+</html>
